@@ -26,10 +26,8 @@ An interactive machine learning application that estimates residential property 
 
 ## 🚀 Live Demo
 
-**Coming soon**
-
-The application will be deployed and the live demo link will be added here.
-
+🔗 **Try the application:**  
+https://house-price-predictor2.streamlit.app/
 ---
 
 ## 📌 Overview
