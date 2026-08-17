@@ -1,0 +1,798 @@
+    /* =========================================================
+   FEATURE IMPORTANCE
+   ========================================================= */
+
+    .feature-section {
+        margin-top: 55px;
+        margin-bottom: 25px;
+    }
+
+    .feature-section h2 {
+        font-size: 2rem;
+        font-weight: 800;
+        color: #172033;
+        margin-bottom: 8px;
+    }
+
+    .feature-section p {
+        font-size: 1rem;
+        color: #64748b;
+        margin-bottom: 30px;
+    }
+
+    .importance-row {
+        margin-bottom: 22px;
+    }
+
+    .importance-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 8px;
+
+        font-size: 1rem;
+        font-weight: 700;
+
+        color: #172033;
+    }
+
+    .importance-bar-background {
+        width: 100%;
+        height: 12px;
+
+        background: #e8edf4;
+
+        border-radius: 20px;
+
+        overflow: hidden;
+    }
+
+    .importance-bar {
+        height: 100%;
+
+        background: linear-gradient(90deg,
+                #ff4b4b,
+                #ff6b6b);
+
+        border-radius: 20px;
+
+        min-width: 4px;
+    }
+
+    .section-heading {
+        margin-top: 60px;
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+        color: #17213a;
+    }
+
+    .section-heading p {
+        font-size: 1.1rem;
+        color: #667085;
+    }
+
+    .importance-row {
+        margin-bottom: 28px;
+    }
+
+    .importance-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #17213a;
+    }
+
+    .importance-bar {
+        width: 100%;
+        height: 16px;
+        background: #e8edf5;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .importance-fill {
+        height: 100%;
+        background: linear-gradient(90deg,
+                #ff4d4d,
+                #ff6b6b);
+        border-radius: 10px;
+    }
+
+
+
+    /* =====================================================
+       GENERAL PAGE
+    ===================================================== */
+
+    /* Force the light background used in the original design */
+    .stApp,
+    [data-testid="stAppViewContainer"],
+    [data-testid="stAppViewContainer"]>.main,
+    .main {
+        background-color: #f5f7fb !important;
+        color: #172033 !important;
+    }
+
+    /* Keep the top Streamlit header light as well */
+    [data-testid="stHeader"] {
+        background-color: #f5f7fb !important;
+    }
+
+    .block-container {
+        max-width: 1100px;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+        padding: 40px 0 30px 0;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        color: #172033;
+        margin-bottom: 10px;
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+        color: #66758f;
+        max-width: 750px;
+        line-height: 1.6;
+    }
+
+
+    /* =====================================================
+       SECTION TITLES
+    ===================================================== */
+
+    .section-title {
+        font-size: 2rem;
+        font-weight: 750;
+        color: #172033;
+        margin-top: 35px;
+        margin-bottom: 20px;
+    }
+
+
+    /* =====================================================
+       CAROUSEL
+    ===================================================== */
+
+    .carousel {
+        position: relative;
+        width: 100%;
+        height: 520px;
+        overflow: hidden;
+        border-radius: 26px;
+        background: #172033;
+        box-shadow: 0 18px 45px rgba(20, 30, 50, 0.16);
+    }
+
+
+    /* =====================================================
+       CAROUSEL SLIDES
+    ===================================================== */
+
+    .carousel-slide {
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        opacity: 0;
+
+        animation-name: houseCarousel;
+        animation-duration: __DURATION__s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+
+    /* =====================================================
+       CAROUSEL IMAGE
+    ===================================================== */
+
+    .carousel-slide img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        display: block;
+    }
+
+
+    /* =====================================================
+       IMAGE DARK OVERLAY
+    ===================================================== */
+
+    .carousel-overlay {
+        position: absolute;
+        inset: 0;
+
+        display: flex;
+        align-items: flex-end;
+
+        padding: 45px;
+
+        background:
+            linear-gradient(to top,
+                rgba(0, 0, 0, 0.85) 0%,
+                rgba(0, 0, 0, 0.55) 30%,
+                rgba(0, 0, 0, 0.12) 70%,
+                rgba(0, 0, 0, 0.00) 100%);
+
+        z-index: 2;
+    }
+
+
+    /* =====================================================
+       CAROUSEL TEXT
+    ===================================================== */
+
+    .carousel-text {
+        position: relative;
+        z-index: 3;
+
+        color: white;
+        max-width: 750px;
+        text-align: left;
+    }
+
+
+    /* =====================================================
+       FEATURED BADGE
+    ===================================================== */
+
+    .property-badge {
+        display: inline-block;
+
+        padding: 7px 14px;
+        margin-bottom: 12px;
+
+        border-radius: 50px;
+
+        background: #ff4b4b;
+        color: white;
+
+        font-size: 0.75rem;
+        font-weight: 800;
+
+        letter-spacing: 1px;
+    }
+
+
+    /* =====================================================
+       PROPERTY TITLE
+    ===================================================== */
+
+    .carousel-text h2 {
+        margin: 0 0 8px 0;
+
+        color: white !important;
+
+        font-size: 2.7rem !important;
+        font-weight: 800 !important;
+
+        line-height: 1.1;
+
+        text-shadow:
+            0 2px 8px rgba(0, 0, 0, 0.55);
+    }
+
+
+    /* =====================================================
+       PROPERTY DESCRIPTION
+    ===================================================== */
+
+    .carousel-text p {
+        margin: 0;
+
+        color: rgba(255, 255, 255, 0.95) !important;
+
+        font-size: 1.05rem !important;
+        font-weight: 500;
+
+        text-shadow:
+            0 2px 6px rgba(0, 0, 0, 0.5);
+    }
+
+
+    /* =====================================================
+       CAROUSEL ANIMATION
+    ===================================================== */
+
+    .carousel-slide:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .carousel-slide:nth-child(2) {
+        animation-delay: 4s;
+    }
+
+    .carousel-slide:nth-child(3) {
+        animation-delay: 8s;
+    }
+
+    .carousel-slide:nth-child(4) {
+        animation-delay: 12s;
+    }
+
+    .carousel-slide:nth-child(5) {
+        animation-delay: 16s;
+    }
+
+
+    @keyframes houseCarousel {
+
+        0% {
+            opacity: 0;
+        }
+
+        4% {
+            opacity: 1;
+        }
+
+        18% {
+            opacity: 1;
+        }
+
+        22% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+
+    /* =====================================================
+       INPUT LABELS
+    ===================================================== */
+
+    [data-testid="stWidgetLabel"] p,
+    [data-testid="stWidgetLabel"] label,
+    [data-testid="stWidgetLabel"] span,
+    .stSlider label,
+    .stNumberInput label {
+        color: #172033 !important;
+        font-weight: 650 !important;
+        font-size: 1rem !important;
+        opacity: 1 !important;
+    }
+
+    [data-testid="stWidgetLabel"] small {
+        color: #66758f !important;
+        opacity: 1 !important;
+    }
+
+    [data-testid="stWidgetLabel"] svg {
+        color: #66758f !important;
+        fill: #66758f !important;
+    }
+
+
+    /* =====================================================
+       INPUT INFORMATION CARD
+    ===================================================== */
+
+    .input-info {
+        background: white;
+
+        padding: 18px 22px;
+
+        border-radius: 14px;
+
+        border-left: 5px solid #ff4b4b;
+
+        margin-bottom: 25px;
+
+        box-shadow:
+            0 5px 20px rgba(20, 30, 50, 0.06);
+    }
+
+    .input-info-title {
+        font-weight: 700;
+        color: #172033;
+        font-size: 1.05rem;
+    }
+
+    .input-info-text {
+        color: #66758f;
+        font-size: 0.9rem;
+        margin-top: 4px;
+    }
+
+
+    /* =====================================================
+       PREDICT BUTTON
+    ===================================================== */
+
+    .stButton>button {
+        background-color: #ff4b4b;
+
+        color: white;
+
+        border: none;
+
+        border-radius: 12px;
+
+        padding: 12px 28px;
+
+        font-size: 1rem;
+
+        font-weight: 700;
+
+        transition: all 0.2s ease;
+    }
+
+    .stButton>button:hover {
+        background-color: #e63d3d;
+
+        color: white;
+
+        transform: translateY(-1px);
+    }
+
+
+    /* =====================================================
+       PREDICTION CARD
+    ===================================================== */
+
+    .prediction-card {
+        background:
+            linear-gradient(135deg,
+                #117c72,
+                #0c6860);
+
+        color: white;
+
+        border-radius: 24px;
+
+        padding: 45px 30px;
+
+        text-align: center;
+
+        margin-top: 35px;
+        margin-bottom: 25px;
+
+        box-shadow:
+            0 15px 40px rgba(17, 124, 114, 0.25);
+    }
+
+    .prediction-label {
+        font-size: 1rem;
+
+        font-weight: 800;
+
+        letter-spacing: 2px;
+
+        text-transform: uppercase;
+
+        opacity: 0.9;
+    }
+
+    .prediction-price {
+        font-size: 3.8rem;
+
+        font-weight: 800;
+
+        margin: 15px 0;
+    }
+
+    .prediction-description {
+        font-size: 1rem;
+
+        opacity: 0.9;
+    }
+
+    /* =========================================================
+   PREDICTION RANGE
+   ========================================================= */
+
+    .prediction-range {
+        margin-top: 35px;
+        padding-top: 28px;
+        border-top: 1px solid rgba(255, 255, 255, 0.25);
+        text-align: center;
+    }
+
+    .range-label {
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        opacity: 0.85;
+        margin-bottom: 12px;
+    }
+
+    .range-value {
+        font-size: 27px;
+        font-weight: 800;
+        margin-bottom: 12px;
+    }
+
+    .range-value span {
+        margin: 0 10px;
+        opacity: 0.6;
+    }
+
+    .range-description {
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 1.6;
+        opacity: 0.8;
+    }
+
+
+    /* =====================================================
+       SUMMARY CARD
+    ===================================================== */
+
+    .summary-card {
+        background: white;
+
+        border-radius: 20px;
+
+        padding: 28px;
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        box-shadow:
+            0 8px 30px rgba(20, 30, 50, 0.08);
+    }
+
+    .summary-title {
+        font-size: 1.3rem;
+
+        font-weight: 750;
+
+        color: #172033;
+
+        margin-bottom: 20px;
+    }
+
+    .summary-item {
+        padding: 15px;
+
+        background: #f5f7fb;
+
+        border-radius: 12px;
+
+        margin-bottom: 10px;
+    }
+
+    .summary-label {
+        color: #66758f;
+
+        font-size: 0.85rem;
+    }
+
+    .summary-value {
+        color: #172033;
+
+        font-weight: 700;
+
+        font-size: 1.05rem;
+    }
+
+    /* =========================================================
+   MODEL PERFORMANCE
+   ========================================================= */
+
+    .section-header {
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    .section-header h2 {
+        font-size: 38px;
+        font-weight: 800;
+        color: #172036;
+        margin-bottom: 10px;
+    }
+
+    .section-header p {
+        font-size: 18px;
+        color: #64748b;
+        line-height: 1.7;
+        max-width: 850px;
+    }
+
+
+    .metric-card {
+        background: white;
+        border-radius: 20px;
+        padding: 30px 25px;
+        text-align: center;
+        min-height: 170px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+        border: 1px solid #e8edf5;
+    }
+
+
+    .metric-value {
+        font-size: 34px;
+        font-weight: 800;
+        color: #172036;
+        margin-bottom: 8px;
+    }
+
+
+    .metric-label {
+        font-size: 17px;
+        font-weight: 700;
+        color: #ff5252;
+        margin-bottom: 8px;
+    }
+
+
+    .metric-description {
+        font-size: 14px;
+        color: #64748b;
+        line-height: 1.5;
+    }
+
+
+    .model-performance-info {
+        background: white;
+        border-radius: 20px;
+        padding: 35px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        border-left: 5px solid #ff5252;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    }
+
+
+    .model-performance-info h3 {
+        font-size: 24px;
+        color: #172036;
+        margin-bottom: 20px;
+    }
+
+
+    .model-performance-info p {
+        font-size: 16px;
+        color: #64748b;
+        line-height: 1.8;
+        margin-bottom: 15px;
+    }
+
+
+    .model-performance-info strong {
+        color: #172036;
+    }
+
+    /* =========================================================
+   PDF DOWNLOAD BUTTON
+   ========================================================= */
+
+    div.stDownloadButton>button {
+        width: 100%;
+        min-height: 55px;
+        border-radius: 12px;
+        border: none;
+        background: #172036;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 25px;
+        transition: all 0.2s ease;
+    }
+
+    div.stDownloadButton>button:hover {
+        background: #24304a;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+
+    /* =====================================================
+       DISCLAIMER
+    ===================================================== */
+
+    .disclaimer {
+        background: #fff8e6;
+
+        border: 1px solid #f3d48b;
+
+        color: #755b1c;
+
+        padding: 18px 20px;
+
+        border-radius: 14px;
+
+        margin-top: 25px;
+
+        font-size: 0.9rem;
+
+        line-height: 1.5;
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    .footer {
+        background: #172033;
+
+        color: white;
+
+        border-radius: 22px;
+
+        padding: 35px;
+
+        text-align: center;
+
+        margin-top: 60px;
+    }
+
+    .footer-title {
+        font-size: 1.4rem;
+
+        font-weight: 750;
+
+        margin-bottom: 8px;
+    }
+
+    .footer-text {
+        color: #b8c1d1;
+
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 768px) {
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .carousel {
+            height: 390px;
+
+            border-radius: 20px;
+        }
+
+        .carousel-overlay {
+            padding: 25px;
+        }
+
+        .carousel-text h2 {
+            font-size: 1.8rem !important;
+        }
+
+        .carousel-text p {
+            font-size: 0.9rem !important;
+        }
+
+        .prediction-price {
+            font-size: 2.8rem;
+        }
+    }
