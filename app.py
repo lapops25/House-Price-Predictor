@@ -29,9 +29,8 @@ from sklearn.model_selection import train_test_split
 
 st.set_page_config(
     page_title="House Price Predictor",
-    page_icon="🏠",
-    layout="wide",
-    initial_sidebar_state="collapsed"
+    page_icon="images/logo.png",
+    layout="wide"
 )
 
 
